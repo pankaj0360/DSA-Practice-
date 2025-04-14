@@ -13,19 +13,19 @@ class InsertElement {
         st.push(67);
         st.push(54);
         System.out.println(st);
-        insertAtIndex(st,100);
+        insertAtBottom(st,100);
         System.out.println("work done");
         System.out.println(st);
 
     }
-    public  void insertAtIndex(Stack st,int nb){
+    public  void insertAtBottom(Stack st,int nb){
             if(st.empty()){
                 st.push(nb);
                 return;
             }
             int top = (int)st.peek();
             st.pop();
-            insertAtIndex(st,nb);
+            insertAtBottom(st,nb);
             st.push(top);
     }
 }
